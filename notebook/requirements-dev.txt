@@ -1,0 +1,20 @@
+# Experimental / notebook environment (not used in production)
+# Includes the app requirements, so notebooks match production versions.
+-r ../requirements.txt
+
+# ---------- Jupyter ----------
+ipykernel
+jupyter
+ipywidgets
+
+# ---------- Experimental (from notebook list) ----------
+# Packages already in requirements.txt (langgraph, langchain-core, python-dotenv, pinecone,
+# langchain-pinecone, langchain-community, langchain-text-splitters, langchain-tavily)
+# use the production versions from there.
+# Notebook list had langchain==1.3.16, but it needs langgraph>=1.2.11 (production pins 1.1.10),
+# so uv picks the newest langchain compatible with the production versions.
+langchain
+langchain-groq==1.1.3
+langchain-huggingface==1.2.2
+sentence-transformers==6.0.0
+beautifulsoup4==4.15.0

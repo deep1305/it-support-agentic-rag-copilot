@@ -1,0 +1,61 @@
+# ---------- Secrets ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+.python-version
+
+# ---------- uv ----------
+.uv/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- Testing / tooling caches ----------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ---------- Logs & local data ----------
+*.log
+logs/
+*.sqlite3
+*.db
+
+# ---------- Local model / embedding caches ----------
+.cache/
+huggingface/
+*.safetensors
+*.gguf
+*.bin
+
+# ---------- Uploaded files (FastAPI) ----------
+uploads/
+
+# ---------- IDE / OS ----------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
