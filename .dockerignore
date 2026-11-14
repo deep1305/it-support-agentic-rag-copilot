@@ -1,0 +1,68 @@
+# Docker matches patterns from the build-context root; "**/" is needed to match in subfolders.
+# Do NOT ignore *.md: data/sample_kb/*.md is the sample knowledge base copied into the image.
+
+# ---------- Secrets ----------
+.env
+.env.*
+**/*.pem
+**/*.key
+
+# ---------- Version control / Docker ----------
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+docker-compose*.yml
+compose*.yaml
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+
+# ---------- Python ----------
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+build/
+dist/
+
+# ---------- Testing / tooling caches ----------
+tests/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ---------- Notebooks / experiments ----------
+notebook/
+**/.ipynb_checkpoints/
+
+# ---------- Local data, uploads & logs ----------
+uploads/
+**/*.db
+**/*.sqlite3
+**/*.log
+logs/
+
+# ---------- Local model / embedding caches ----------
+.cache/
+huggingface/
+**/*.gguf
+**/*.safetensors
+**/*.bin
+
+# ---------- Not needed in the image ----------
+create_project.py
+
+# ---------- IDE / OS / Claude ----------
+.claude/
+.vscode/
+.idea/
+**/*.swp
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
